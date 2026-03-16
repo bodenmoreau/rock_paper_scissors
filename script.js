@@ -18,7 +18,8 @@ const getHumanSel = readline.createInterface({
     output: process.stdout
 });
 
-getHumanSel.question("Rock, Paper, Scissors?", () => {
-    console.log(getHumanSel());
+getHumanSel.question("Rock, Paper, Scissors? ", (humAns) => {
+    console.log(`You chose ${humAns}!`);
     getHumanSel.close;
 });
+
