@@ -1,4 +1,5 @@
-const getComputerChoice = function() {
+//Computer chooses Rock, Paper, or Scissors, depending on what number is generated.
+const getComputerSel = function() {
     const random = Math.random();
     if (random < 0.33) {
         return "Rock";
@@ -7,6 +8,17 @@ const getComputerChoice = function() {
     } else {
         return "Scissors";
     }
-}
+};
 
-console.log(getComputerChoice());
+//Prompts the user to pick R, P, or S inside of node terminal.
+const readline = require('readline');
+
+const getHumanSel = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
+
+getHumanSel.question("Rock, Paper, Scissors?", () => {
+    console.log(getHumanSel());
+    getHumanSel.close;
+});
